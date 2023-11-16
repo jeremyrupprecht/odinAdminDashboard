@@ -1,6 +1,6 @@
 :root {
     --dash-foreground: #030506f5;
-    --dash-background: #030506cc;
+    --dash-background: rgb(48, 48, 48); /*#030506cc ; */
     font-size: calc(0.625rem + 0.4vw);
 }
 
@@ -68,6 +68,16 @@ h3 {
     background-color: var(--dash-foreground);
 
     display: grid;
+    grid-template: 2fr 3fr / 1fr 1fr;
+}
+
+.searchbar img {
+    width: 2rem;
+}
+
+input[type="search"] {
+    border-radius: 3px;
+    background-color: var(--dash-background);
 }
 
 .mainbody-grid {
