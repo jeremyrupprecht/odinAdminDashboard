@@ -1,6 +1,7 @@
 :root {
     --dash-foreground: #030506f5;
     --dash-background: #030506cc;
+    font-size: calc(0.625rem + 0.4vw);
 }
 
 * {
@@ -20,6 +21,24 @@
 .sidebar {
     background-color: #0284c7;
     grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    font-size: 2.0rem;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+
+.sidebar > div{
+    display: flex;
+}
+
+.sidebar img {
+    width: 2.5rem;
 }
 
 .navbar-grid {
