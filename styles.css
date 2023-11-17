@@ -69,8 +69,13 @@ h3 {
 
     display: grid;
     grid-template: 2fr 3fr / 2fr 1fr;
-    justify-items: center;
     align-items: center;
+}
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .searchbar img {
@@ -78,11 +83,42 @@ h3 {
     margin-right: 10px;
 }
 
+.top-right-icons {
+    display: flex;
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.top-right-icons button {
+    background: transparent;
+    border: none;
+}
+
+.top-right-icons img {
+    width: 1.6rem;
+}
+
+.top-right-icons > button > img:not(.top-right-icons > button:nth-child(3) > img ) {
+    width: 1.5rem;
+    margin-right: 10px;
+}
+
+.top-right-icons > button:nth-child(3) > img {
+    width: 64px;
+    border-radius: 48px;
+}
+
+.top-right-icons button {
+    margin: 0px 5px;
+}
+
 input[type="search"] {
     border-radius: 10px;
     background-color: var(--dash-background);
     padding-top: 10px;
-    width: 500px;
+    width: max(200px, 80%);
     border: 0;
 }
 
