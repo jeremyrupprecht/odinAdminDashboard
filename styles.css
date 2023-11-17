@@ -68,16 +68,22 @@ h3 {
     background-color: var(--dash-foreground);
 
     display: grid;
-    grid-template: 2fr 3fr / 1fr 1fr;
+    grid-template: 2fr 3fr / 2fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .searchbar img {
-    width: 2rem;
+    width: 1.5rem;
+    margin-right: 10px;
 }
 
 input[type="search"] {
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: var(--dash-background);
+    padding-top: 10px;
+    width: 500px;
+    border: 0;
 }
 
 .mainbody-grid {
@@ -112,7 +118,7 @@ h2 {
     margin: 15px;
     display: flex;
     flex-direction: column;
-    max-height: 400px;              /* give this to the row specification*/
+    max-height: 400px;              /* give this to the row specification?*/
 }
 
 .accouncements {
