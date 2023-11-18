@@ -171,7 +171,7 @@ input[type="search"] {
     background-color: var(--dash-background);
 
     display: grid;
-    grid-template: 30px 1fr / 4fr 1fr;
+    grid-template: 30px 1fr / 3fr 1fr;
     padding: 20px;
     gap: 10px;
 }
@@ -224,10 +224,15 @@ h2 {
     height: 1px;
     width: 100%;
     background-color: white;
-    /* margin: 5px; */
+    margin: 15px 0px 0px 0px;
 }
 
 .announcementBlock {
     padding: 10px;
+}
+
+.announcementBlock p {
+    color: gray;
+    margin-top: 5px;
 }
 
