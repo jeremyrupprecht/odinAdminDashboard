@@ -227,16 +227,17 @@ h2 {
 }
 
 .accouncements, .trending {
+    flex-grow: 1;
     display: flex;
-    gap: 2px;
     flex-direction: column;
-    max-height: 400px;              /* give this to the row specification?*/
-    padding: 5px;
+    justify-content: space-around;
+    gap: 2px;
+    /* max-height: 400px;              give this to the row specification? */
 
     grid-area: 2 / 2 / 3 / 3;
     background-color: var(--dash-foreground);
     border-radius: 20px;
-    padding: 10px 0px;
+    padding: 10px 10px;
 }
 
 .line {
