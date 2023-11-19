@@ -18,6 +18,10 @@ button {
     border: none;
 }
 
+button:active {
+    transform: scale(0.95);
+}
+
 .sidebar-grid {
     min-height: 100vh;
     display: grid;
@@ -31,6 +35,7 @@ button {
     flex-direction: column;
     align-items: start;
     padding: 20px 20px 20px 30px;
+    gap: 20px;
 }
 
 .sidebar h1 {
@@ -39,8 +44,16 @@ button {
     padding-bottom: 5px;
 }
 
-.sidebar > div{
+.sidebar div {
     display: flex;
+}
+
+.sidebar > button {
+    display: flex;
+}
+
+.sidebar > button > img {
+    width: 1.5rem;
 }
 
 #menu-img {
@@ -48,17 +61,19 @@ button {
     margin-bottom: 50px;
 }
 
-.sidebar > div:not(.sidebar > div:first-child) {
-    /* outline: red 1px solid; */
+.sidebar > button {
     margin: 10px 0px;
 }
 
-h3 {
-    /* outline: black 1px solid; */
-    padding-top: 5px;
+.sidebar h3 {
+    padding-top: 0px;
     padding-left: 10px;
     padding-bottom: 5px;
-    font-size: 1.1em;
+    font-size: 1.3em;
+}
+
+.sidebar h3:hover {
+    color: black;
 }
 
 .sidebar > div > img {
@@ -85,13 +100,11 @@ h3 {
 .searchbar, .navbar-heading {
     width: 100%;
     display: flex;
-    /* justify-content: center; */
 }
 
 .searchbar img {
     width: 1.5rem;
     margin-right: 10px;
-    /* padding-top: 0px; */
 }
 
 .top-right-icons {
@@ -101,20 +114,17 @@ h3 {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .top-right-icons img {
     width: 1.6rem;
 }
 
-.top-right-icons > button > img:not(top-right-icons > button:nth-child(3) > img ) {
-    width: 1.5rem;
-    margin-right: 10px;
-}
-
 .top-right-icons > button:nth-child(3) > img {
-    width: 64px;
+    width: 3rem;
     border-radius: 48px;
+    margin-right: 10px;
 }
 
 .top-right-icons button {
@@ -124,6 +134,10 @@ h3 {
 .bottom-right-icons {
     grid-area: 2 / 3 / 3 / 4;
     justify-self: center;
+}
+
+.bottom-right-icons button:hover {
+    background-color: #0599e2;
 }
 
 .bottom-right-icons button {
@@ -193,13 +207,15 @@ input[type="search"] {
 
 .project-card {
     background-color: var(--dash-foreground);
-    /* height: 1fr; */
     border-radius: 10px;
-    /* min-height: 200px; */
-    /* max-height: 400px; */
 
     display: grid;
     grid-template: 1fr auto / 15px 1fr; 
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    transition-duration: 0.5s;
 }
 
 .card-side {
@@ -225,6 +241,10 @@ input[type="search"] {
 
 .card-icons img {
     width: 2.7rem;
+}
+
+.card-icons button:hover {
+    transform: scale(1.05);
 }
 
 .card-main h2 {
@@ -253,7 +273,6 @@ h2 {
     flex-direction: column;
     justify-content: space-around;
     gap: 2px;
-    /* max-height: 400px;              give this to the row specification? */
 
     grid-area: 2 / 2 / 3 / 3;
     background-color: var(--dash-foreground);
